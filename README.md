@@ -2,7 +2,7 @@
 
 For installation use several steps:
 
-1. git clone
+1. git clone https://github.com/mountin/copyFilesWork
 
 2. composer update
 
