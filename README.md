@@ -8,7 +8,7 @@ For installation use several steps:
 
 3. sudo composer dump-autoload -o
 
-4. create folder image make sure you write to this folder
+4. create folder "images" make sure you write permission to this folder
 
 5. run index.php
 
