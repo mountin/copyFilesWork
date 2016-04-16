@@ -1,9 +1,12 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: mountin
+ * @User: mountin
  * Date: 11.04.16
  * Time: 22:49
+ * Makes 3 tests using phpunit
+ * to run this test input in main project folder: vendor/bin/phpunit  uniTest.php
+ * then test will be started
  */
 
     require_once('vendor/autoload.php');
