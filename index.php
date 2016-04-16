@@ -3,11 +3,10 @@
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
 
-    use \app\Codework\UserTest\UserTest as UserTest;
-    use \app\Codework\NewClass\MyNewClass as MyNewClass;
+    use \app\Codework\AppWork\AppWork as AppWork;
 
     require_once('vendor/autoload.php');
-//echo '123';
-//$user = new topic2();
-    //$user = new UserTest();
-    $user = new MyNewClass();
+
+    $ff = new AppWork("http://www.images.com/", ['jpg', 'png', 'gif', 'jpeg'], 'images');
+    //$ff = new AppWork("http://www.jaqqa.loc/", ['jpg', 'png', 'gif', 'jpeg'], 'images');
+    $ff->makeCopy();
