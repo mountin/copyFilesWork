@@ -1,12 +1,19 @@
 <?php
     /**
      * Created by PhpStorm.
-     * User: mountin
+     * Test work chaialovsyi sergii
+     * Class make copy of images from remote url
+     * @User: mountin
      * Date: 16.04.16
      * Time: 14:08
+     * @host is host internet
+     * @folder - folder to download images
+     * @formats - allowed formats of extensions @array[]
+     * @return number of images downloaded
      */
 
     namespace app\Codework\AppWork;
+
     use app\Codework\Exceptions\BaseException;
 
     class AppWork
@@ -22,6 +29,10 @@
             $this->folder = $folder;
         }
 
+        /**
+         * function make copy of images
+         * @return number of images downloaded or throw exceptions
+         */
         function makeCopy()
         {
             static $counter = 0;
@@ -30,7 +41,7 @@
 
                 if (!$fp) {
                     throw new BaseException("Could not open the host name! BASE");
-                }else{
+                } else {
                     fclose($fp);
                 }
             } catch (BaseException $e) {
@@ -50,7 +61,7 @@
                 foreach ($imageTags as $tag) {
                     $file1 = pathinfo($tag->getAttribute('src'));
                     var_dump($file1);
-                    if(empty($file1['extension'])){
+                    if (empty($file1['extension'])) {
                         throw new fileModuleException("Not image  File exist!");
                         continue;
                     }
